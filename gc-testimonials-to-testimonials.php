@@ -3,7 +3,7 @@
  * Plugin Name: GC Testimonials to Testimonials
  * Plugin URI: http://wordpress.org/plugins/gc-testimonials-to-testimonials/
  * Description: Migrate GC Testimonials entries to Testimonials custom post types.
- * Version: 1.0.1
+ * Version: 1.0.2
  * Author: Michael Cannon
  * Author URI: http://aihr.us/resume/
  * License: GPLv2 or later
@@ -31,17 +31,22 @@ if ( ! defined( 'GCT2T_PLUGIN_DIR_LIB' ) )
 
 require_once GCT2T_PLUGIN_DIR_LIB . '/aihrus/class-aihrus-common.php';
 
+if ( af_php_version_check( __FILE__ ) )
+	add_action( 'plugins_loaded', 'gc_testimonials_to_testimonials_init', 99 );
+else
+	return;
+
 
 class Gc_Testimonials_to_Testimonials extends Aihrus_Common {
 	const FREE_PLUGIN_BASE = 'testimonials-widget/testimonials-widget.php';
-	const FREE_VERSION     = '2.16.2';
+	const FREE_VERSION     = '2.16.3';
 
 	const GCT_PT      = 'testimonial';
 	const ID          = 'gc-testimonials-to-testimonials';
 	const ITEM_NAME   = 'GC Testimonials to Testimonials';
 	const PLUGIN_BASE = 'gc-testimonials-to-testimonials/gc-testimonials-to-testimonials.php';
 	const SLUG        = 'gct2t_';
-	const VERSION     = '1.0.1';
+	const VERSION     = '1.0.2';
 
 	private static $post_types;
 
@@ -704,9 +709,6 @@ class Gc_Testimonials_to_Testimonials extends Aihrus_Common {
 register_activation_hook( __FILE__, array( 'Gc_Testimonials_to_Testimonials', 'activation' ) );
 register_deactivation_hook( __FILE__, array( 'Gc_Testimonials_to_Testimonials', 'deactivation' ) );
 register_uninstall_hook( __FILE__, array( 'Gc_Testimonials_to_Testimonials', 'uninstall' ) );
-
-
-add_action( 'plugins_loaded', 'gc_testimonials_to_testimonials_init', 99 );
 
 
 /**

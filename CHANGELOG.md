@@ -2,6 +2,10 @@
 
 ## master
 
+## 1.0.2
+* Check for PHP 5.3
+* Move screenshots to SVN assets
+
 ## 1.0.1
 * Add screenshot 1. GC Testimonials to Testimonials Settings
 * Add screenshot 2. GC Testimonials to Testimonials Migrator
