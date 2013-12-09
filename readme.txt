@@ -42,6 +42,11 @@ Migrate GC Testimonials entries to Testimonials [by Aihrus](http://aihr.us/about
 
 == Installation ==
 
+= Requirements =
+
+* PHP 5.3+ [Read notice](https://aihrus.zendesk.com/entries/30678006)
+* Plugin "[Testimonials by Aihrus](http://wordpress.org/plugins/testimonials-widget/)" is required to be installed and activated prior to activating "GC Testimonials to Testimonials".
+
 = Install Methods =
 
 * Through WordPress Admin > Plugins > Add New, Search for "GC Testimonials to Testimonials"
@@ -55,9 +60,7 @@ Migrate GC Testimonials entries to Testimonials [by Aihrus](http://aihr.us/about
 * Download and unzip [`gc-testimonials-to-testimonials.zip`](http://downloads.wordpress.org/plugin/gc-testimonials-to-testimonials.zip) locally
 	* Using FTP, upload directory `gc-testimonials-to-testimonials` to your website's `/wp-content/plugins/` directory
 
-= Activatation Options =
-
-**Plugin "[Testimonials by Aihrus](http://wordpress.org/plugins/testimonials-widget/)" is required to be installed and activated prior to activating "GC Testimonials to Testimonials".**
+= Activation Options =
 
 * Activate the "GC Testimonials to Testimonials" plugin after uploading
 * Activate the "GC Testimonials to Testimonials" plugin through WordPress Admin > Plugins
@@ -65,7 +68,7 @@ Migrate GC Testimonials entries to Testimonials [by Aihrus](http://aihr.us/about
 = Usage =
 
 1. Edit options through WordPress Admin > Testimonials > GCT Settings
-1. Migrate GC Testimonials via WP Admin > Testimonials > GCT Migrator
+1. Migrate GC Testimonials via WordPress Admin > Testimonials > GCT Migrator
 
 
 = Upgrading =
