@@ -2,6 +2,14 @@
 
 ## master
 
+## 1.1.0
+* Convert TODO to https://github.com/michael-cannon/gc-testimonials-to-testimonials/issues
+* Implement PHP version checking
+* Implement WordPress version checking
+* Revise readme installation
+* Revise readme structure
+* Tested up to 3.9.0
+
 ## 1.0.4
 * Update Aihrus framework
 

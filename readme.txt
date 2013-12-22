@@ -4,8 +4,8 @@ Contributors: comprock
 Donate link: http://aihr.us/about-aihrus/donate/
 Tags: gc testimonials, migration, convert, testimonials, testimonials widget
 Requires at least: 3.6
-Tested up to: 3.8.0
-Stable tag: 1.0.4
+Tested up to: 3.9.0
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -78,7 +78,7 @@ Migrate GC Testimonials entries to Testimonials [by Aihrus](http://aihr.us/about
 	* Select plugins for update, click "Update Plugins"
 * Using FTP
 	* Download and unzip [`gc-testimonials-to-testimonials.zip`](http://downloads.wordpress.org/plugin/gc-testimonials-to-testimonials.zip) locally
-	* FTP, upload directory `gc-testimonials-to-testimonials` to your website's `/wp-content/plugins/` directory
+	* Upload directory `gc-testimonials-to-testimonials` to your website's `/wp-content/plugins/` directory
 	* Be sure to overwrite your existing `gc-testimonials-to-testimonials` folder contents
 
 
