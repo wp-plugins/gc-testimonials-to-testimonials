@@ -1,6 +1,14 @@
-# CHANGELOG GC Testimonials to Testimonials
+# CHANGELOG GC Testimonials to Testimonials by Aihrus
 
 ## master
+
+## 1.1.1
+* Branding update
+* BUGFIX Disable donate doesn't work
+* BUGFIX Fatal error due to inactive REQ_BASE via old Aihrus Framework
+* Show premium link when its not activated
+* Use Aihrus Framework 1.0.1
+* Use aihr_check_aihrus_framework
 
 ## 1.1.0
 * Convert TODO to https://github.com/michael-cannon/gc-testimonials-to-testimonials/issues
