@@ -3,7 +3,7 @@
  * Plugin Name: GC Testimonials to Testimonials by Aihrus
  * Plugin URI: http://wordpress.org/plugins/gc-testimonials-to-testimonials/
  * Description: Migrate GC Testimonials entries to Testimonials by Aihrus custom post types.
- * Version: 1.1.0
+ * Version: 1.1.1
  * Author: Michael Cannon
  * Author URI: http://aihr.us/resume/
  * License: GPLv2 or later
@@ -24,6 +24,7 @@
  * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
  */
 
+define( 'GCT2T_AIHR_VERSION', '1.0.1' );
 define( 'GCT2T_BASE', plugin_basename( __FILE__ ) );
 define( 'GCT2T_DIR', plugin_dir_path( __FILE__ ) );
 define( 'GCT2T_DIR_LIB', GCT2T_DIR . '/lib' );
@@ -31,8 +32,8 @@ define( 'GCT2T_NAME', 'GC Testimonials to Testimonials by Aihrus' );
 define( 'GCT2T_REQ_BASE', 'testimonials-widget/testimonials-widget.php' );
 define( 'GCT2T_REQ_NAME', 'Testimonials by Aihrus' );
 define( 'GCT2T_REQ_SLUG', 'testimonials-widget' );
-define( 'GCT2T_REQ_VERSION', '2.17.0' );
-define( 'GCT2T_VERSION', '1.1.0' );
+define( 'GCT2T_REQ_VERSION', '2.17.1' );
+define( 'GCT2T_VERSION', '1.1.1' );
 
 require_once GCT2T_DIR_LIB . '/requirements.php';
 
@@ -151,13 +152,17 @@ class Gc_Testimonials_to_Testimonials extends Aihrus_Common {
 		if ( self::BASE != $file )
 			return $input;
 
-		$disable_donate = gct2t_get_option( 'disable_donate' );
+		$disable_donate = tw_get_option( 'disable_donate' );
 		if ( $disable_donate )
 			return $input;
 
 		$links = array(
-			'<a href="http://aihr.us/about-aihrus/donate/"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" alt="PayPal - The safer, easier way to pay online!" /></a>',
+			self::$donate_link,
 		);
+
+		global $TW_Premium;
+		if ( ! isset( $TW_Premium ) )
+			$links[] = TW_PREMIUM_LINK;
 
 		$input = array_merge( $input, $links );
 
@@ -553,7 +558,7 @@ class Gc_Testimonials_to_Testimonials extends Aihrus_Common {
 	 * @SuppressWarnings(PHPMD.UnusedFormalParameter)
 	 */
 	public static function notice_donate( $disable_donate = null, $item_name = null ) {
-		$disable_donate = gct2t_get_option( 'disable_donate' );
+		$disable_donate = tw_get_option( 'disable_donate' );
 
 		parent::notice_donate( $disable_donate, GCT2T_NAME );
 	}
@@ -610,7 +615,9 @@ class Gc_Testimonials_to_Testimonials extends Aihrus_Common {
 		$valid_version = true;
 
 		$valid_base = true;
-		if ( ! defined( 'TW_VERSION' ) ) {
+		if ( ! is_plugin_active( GCT2T_REQ_BASE ) ) {
+			$valid_base = false;
+		} elseif ( ! defined( 'TW_VERSION' ) ) {
 			$valid_base = false;
 		} elseif ( ! version_compare( TW_VERSION, GCT2T_REQ_VERSION, '>=' ) ) {
 			$valid_base = false;
