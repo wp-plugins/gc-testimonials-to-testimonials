@@ -86,6 +86,7 @@ class Gc_Testimonials_to_Testimonials extends Aihrus_Common {
 		add_action( 'wp_ajax_ajax_process_post', array( __CLASS__, 'ajax_process_post' ) );
 
 		self::set_post_types();
+		self::styles();
 	}
 
 
@@ -162,6 +163,7 @@ class Gc_Testimonials_to_Testimonials extends Aihrus_Common {
 	 *
 	 * @SuppressWarnings(PHPMD.ExitExpression)
 	 * @SuppressWarnings(PHPMD.Superglobals)
+	 * @codingStandardsIgnoreStart
 	 */
 	public static function user_interface() {
 		// Capability check
@@ -206,6 +208,7 @@ class Gc_Testimonials_to_Testimonials extends Aihrus_Common {
 	</div>
 <?php
 	}
+	// @codingStandardsIgnoreEnd
 
 
 	public static function get_posts_to_process() {
@@ -251,6 +254,11 @@ class Gc_Testimonials_to_Testimonials extends Aihrus_Common {
 	}
 
 
+	/**
+	 *
+	 *
+	 * @codingStandardsIgnoreStart
+	 */
 	public static function show_greeting() {
 ?>
 	<form method="post" action="">
@@ -271,12 +279,14 @@ class Gc_Testimonials_to_Testimonials extends Aihrus_Common {
 	</form>
 <?php
 	}
+	// @codingStandardsIgnoreEnd
 
 
 	/**
 	 *
 	 *
 	 * @SuppressWarnings(PHPMD.Superglobals)
+	 * @codingStandardsIgnoreStart
 	 */
 	public static function show_status( $count, $posts ) {
 		echo '<p>' . esc_html__( 'Please be patient while this script run. This can take a while, up to a minute per post. Do not navigate away from this page until this script is done or the import will not be completed. You will be notified via this page when the import is completed.', 'gc-testimonials-to-testimonials' ) . '</p>';
@@ -419,6 +429,7 @@ class Gc_Testimonials_to_Testimonials extends Aihrus_Common {
 	</script>
 <?php
 	}
+	// @codingStandardsIgnoreEnd
 
 
 	/**
@@ -448,10 +459,9 @@ class Gc_Testimonials_to_Testimonials extends Aihrus_Common {
 	 *
 	 *
 	 * @SuppressWarnings(PHPMD.UnusedFormalParameter)
+	 * @SuppressWarnings(PHPMD.UnusedLocalVariable)
 	 */
 	public static function migrate_item( $post_id, $post ) {
-		global $wpdb;
-
 		$migrated_key  = '_' . Testimonials_Widget::PT;
 		$migrated_args = array(
 			'post_type' => Testimonials_Widget::PT,
@@ -460,7 +470,7 @@ class Gc_Testimonials_to_Testimonials extends Aihrus_Common {
 					'key' => $migrated_key,
 					'value' => $post_id,
 					'type' => 'NUMERIC',
-				)
+				),
 			)
 		);
 
@@ -514,9 +524,7 @@ class Gc_Testimonials_to_Testimonials extends Aihrus_Common {
 
 		$thumbnail_id = get_post_meta( $post_id, '_thumbnail_id', true );
 		if ( $thumbnail_id ) {
-			$src   = wp_get_attachment_url( $thumbnail_id );
-			$file  = basename( $src );
-			
+			$src      = wp_get_attachment_url( $thumbnail_id );
 			$image_id = self::add_media( $new_post_id, $src );
 		}
 
@@ -529,7 +537,7 @@ class Gc_Testimonials_to_Testimonials extends Aihrus_Common {
 	public static function notice_1_0_0() {
 		$text = sprintf( __( 'If your Migrate GC Testimonials to Testimonials display has gone to funky town, please <a href="%s">read the FAQ</a> about possible CSS fixes.', 'gc-testimonials-to-testimonials' ), 'https://aihrus.zendesk.com/entries/23722573-Major-Changes-Since-2-10-0' );
 
-		self::notice_updated( $text );
+		aihr_notice_updated( $text );
 	}
 
 
@@ -605,7 +613,6 @@ class Gc_Testimonials_to_Testimonials extends Aihrus_Common {
 
 	public static function call_scripts_styles( $atts ) {
 		self::scripts( $atts );
-		self::styles();
 	}
 
 

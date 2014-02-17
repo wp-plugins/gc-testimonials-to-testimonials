@@ -2,6 +2,12 @@
 
 ## master
 
+## 1.2.1
+* Change `self::notice_updated` to `aihr_notice_updated`
+* Require Testimonials by Aihrus 2.18.1
+* Revise Plugin Name: Testimonials – GC Testimonials Migrator
+* Use Codeship.io than Travis CI
+
 ## 1.2.0
 * Allow activation with Testimonials Premium
 * Move ci to tests
