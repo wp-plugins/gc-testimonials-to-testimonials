@@ -1,26 +1,26 @@
-=== GC Testimonials to Testimonials by Aihrus ===
+=== GC Testimonials to Testimonials Widget ===
 
 Contributors: comprock, saurabhd
-Donate link: http://aihr.us/about-aihrus/donate/
+Donate link: http://axelerant.com/about-axelerant/donate/
 Tags: gc testimonials, migration, convert, testimonials, testimonials widget
-Requires at least: 3.6
-Tested up to: 3.9.0
-Stable tag: 1.2.2
+Requires at least: 3.9.2
+Tested up to: 4.2.0
+Stable tag: 1.3.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Migrate GC Testimonials entries to Testimonials by Aihrus custom post types.
+Migrate GC Testimonials entries to Testimonials Widget custom post types.
 
 
 == Description ==
 
-Migrate GC Testimonials entries to Testimonials [by Aihrus](http://aihr.us/about-aihrus/) custom post types for use by the best WordPress testimonials plugin there is, [Testimonials by Aihrus](http://wordpress.org/extend/plugins/testimonials-widget/).
+Migrate GC Testimonials entries to Testimonials Widget custom post types for use by the best WordPress testimonials Widget plugin there is, [Testimonials Widget](http://wordpress.org/extend/plugins/testimonials-widget/).
 
 = Primary Features =
 
 * API
 * Ajax based processing screen
-* Migrates GC Testimonial fields, categories, and images to Testimonials by Aihrus format
+* Migrates GC Testimonial fields, categories, and images to Testimonials Widget format
 * Settings export/import
 * Settings screen
 
@@ -36,7 +36,7 @@ Migrate GC Testimonials entries to Testimonials [by Aihrus](http://aihr.us/about
 
 * Export Settings – These are your current settings in a serialized format. Copy the contents to make a backup of your settings.
 * Import Settings – Paste new serialized settings here to overwrite your current configuration.
-* Remove Plugin Data on Deletion? - Delete all GC Testimonials to Testimonials data and options from database on plugin deletion
+* Remove Plugin Data on Deletion? - Delete all GC Testimonials to Testimonials Widget data and options from database on plugin deletion
 * Reset to Defaults? – Check this box to reset options to their defaults
 
 
@@ -44,14 +44,14 @@ Migrate GC Testimonials entries to Testimonials [by Aihrus](http://aihr.us/about
 
 = Requirements =
 
-* PHP 5.3+ [Read notice](https://aihrus.zendesk.com/entries/30678006)
-* Plugin "[Testimonials by Aihrus](http://wordpress.org/plugins/testimonials-widget/)" is required to be installed and activated prior to activating "GC Testimonials to Testimonials".
+* PHP 5.3+ [Read notice](https://nodedesk.zendesk.com/hc/en-us/articles/202331041)
+* Plugin "[Testimonials Widget](http://wordpress.org/plugins/testimonials-widget/)" is required to be installed and activated prior to activating "GC Testimonials to Testimonials Widget".
 
 = Install Methods =
 
-* Through WordPress Admin > Plugins > Add New, Search for "GC Testimonials to Testimonials"
-	* Find "GC Testimonials to Testimonials by Aihrus"
-	* Click "Install Now" of "GC Testimonials to Testimonials by Aihrus"
+* Through WordPress Admin > Plugins > Add New, Search for "GC Testimonials to Testimonials Widget"
+	* Find "GC Testimonials to Testimonials Widget"
+	* Click "Install Now" of "GC Testimonials to Testimonials Widget"
 * Download [`gc-testimonials-to-testimonials.zip`](http://downloads.wordpress.org/plugin/gc-testimonials-to-testimonials.zip) locally
 	* Through WordPress Admin > Plugins > Add New
 	* Click Upload
@@ -62,8 +62,8 @@ Migrate GC Testimonials entries to Testimonials [by Aihrus](http://aihr.us/about
 
 = Activation Options =
 
-* Activate the "GC Testimonials to Testimonials" plugin after uploading
-* Activate the "GC Testimonials to Testimonials" plugin through WordPress Admin > Plugins
+* Activate the "GC Testimonials to Testimonials Widget" plugin after uploading
+* Activate the "GC Testimonials to Testimonials Widget" plugin through WordPress Admin > Plugins
 
 = Usage =
 
@@ -86,22 +86,22 @@ Migrate GC Testimonials entries to Testimonials [by Aihrus](http://aihr.us/about
 
 = Most Common Issues =
 
-* Got `Parse error: syntax error, unexpected T_STATIC, expecting ')'`? Read [Most Aihrus Plugins Require PHP 5.3+](https://aihrus.zendesk.com/entries/30678006) for the fixes.
-* [Debug common theme and plugin conflicts](https://aihrus.zendesk.com/entries/25119302)
+* Got `Parse error: syntax error, unexpected T_STATIC, expecting ')'`? Read [Most Axelerant Plugins Require PHP 5.3+](https://nodedesk.zendesk.com/hc/en-us/articles/202331041) for the fixes.
+* [Debug common theme and plugin conflicts](https://nodedesk.zendesk.com/hc/en-us/articles/202330781)
 
 = Still Stuck or Want Something Done? Get Support! =
 
-1. [Testimonials Knowledge Base](https://aihrus.zendesk.com/categories/20104507) - read and comment upon 125+ frequently asked questions
-1. [Open GC Testimonials to Testimonials Issues](https://github.com/michael-cannon/gc-testimonials-to-testimonials/issues) - review and submit bug reports and enhancement requests
-1. [GC Testimonials to Testimonials Support on WordPress](http://wordpress.org/support/plugin/gc-testimonials-to-testimonials) - ask questions and review responses
-1. [Contribute Code to GC Testimonials to Testimonials](https://github.com/michael-cannon/gc-testimonials-to-testimonials/blob/master/CONTRIBUTING.md)
-1. [Beta Testers Needed](http://aihr.us/become-beta-tester/) - get the latest GC Testimonials to Testimonials version
+1. [Testimonials Widget Knowledge Base](https://nodedesk.zendesk.com/hc/en-us/sections/200861112-WordPress-FAQs) - read and comment upon 125+ frequently asked questions
+1. [Open GC Testimonials to Testimonials Widget Issues](https://github.com/michael-cannon/gc-testimonials-to-testimonials/issues) - review and submit bug reports and enhancement requests
+1. [GC Testimonials to Testimonials Widget Support on WordPress](http://wordpress.org/support/plugin/gc-testimonials-to-testimonials) - ask questions and review responses
+1. [Contribute Code to GC Testimonials to Testimonials Widget](https://github.com/michael-cannon/gc-testimonials-to-testimonials/blob/master/CONTRIBUTING.md)
+1. [Beta Testers Needed](http://axelerant.com/become-beta-tester/) - get the latest GC Testimonials to Testimonials Widget version
 
 
 == Screenshots ==
 
-1. GC Testimonials to Testimonials Settings
-2. GC Testimonials to Testimonials Migrator
+1. GC Testimonials to Testimonials Widget Settings
+2. GC Testimonials to Testimonials Widget Migrator
 
 [gallery]
 
@@ -113,13 +113,17 @@ See [CHANGELOG](https://github.com/michael-cannon/gc-testimonials-to-testimonial
 
 == Upgrade Notice ==
 
+= 1.3.0 =
+
+* Require Testimonials Widget 3.1.0
+
 = 1.2.2 =
 
-* Require Testimonials by Aihrus 2.19.0
+* Require Testimonials Widget 2.19.0
 
 = 1.2.1 =
 
-* Require Testimonials by Aihrus 2.18.1
+* Require Testimonials Widget 2.18.1
 
 = 1.0.0 =
 
@@ -133,10 +137,10 @@ TBD
 
 == API ==
 
-* Read the [GC Testimonials to Testimonials API](https://github.com/michael-cannon/gc-testimonials-to-testimonials/blob/master/API.md).
+* Read the [GC Testimonials to Testimonials Widget API](https://github.com/michael-cannon/gc-testimonials-to-testimonials/blob/master/API.md).
 
 == Localization ==
 
-You can translate this plugin into your own language if it's not done so already. The localization file `gc-testimonials-to-testimonials.pot` can be found in the `languages` folder of this plugin. After translation, please [send the localized file](http://aihr.us/contact-aihrus/) for plugin inclusion.
+You can translate this plugin into your own language if it's not done so already. The localization file `gc-testimonials-to-testimonials.pot` can be found in the `languages` folder of this plugin. After translation, please [send the localized file](http://axelerant.com/contact-axelerant/) for plugin inclusion.
 
-**[How do I localize?](https://aihrus.zendesk.com/entries/23691557)**
+**[How do I localize?](https://nodedesk.zendesk.com/hc/en-us/articles/202294892)**

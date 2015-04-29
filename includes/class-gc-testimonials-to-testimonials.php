@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright 2014 Michael Cannon (email: mc@aihr.us)
+ * Copyright 2015 Axelerant (email: info@axelerant.com)
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License, version 2, as
  * published by the Free Software Foundation.
@@ -119,7 +119,7 @@ class Gc_Testimonials_to_Testimonials extends Aihrus_Common {
 			return;
 
 		global $wpdb;
-		
+
 		require_once GCT2T_DIR_INC . 'class-gc-testimonials-to-testimonials-settings.php';
 
 		$delete_data = gct2t_get_option( 'delete_data', false );
@@ -245,7 +245,7 @@ class Gc_Testimonials_to_Testimonials extends Aihrus_Common {
 		$limit = gct2t_get_option( 'limit' );
 		if ( $limit )
 			$query_wp = preg_replace( '#\bLIMIT 0,.*#', 'LIMIT 0,' . $limit, $query_wp );
-		else
+		else 
 			$query_wp = preg_replace( '#\bLIMIT 0,.*#', '', $query_wp );
 
 		$posts = $wpdb->get_col( $query_wp );
@@ -264,7 +264,7 @@ class Gc_Testimonials_to_Testimonials extends Aihrus_Common {
 	<form method="post" action="">
 <?php wp_nonce_field( self::ID ); ?>
 
-	<p><?php _e( 'Use this tool for migrating GC Testimonials entries to Testimonials custom post types.', 'gc-testimonials-to-testimonials' ); ?></p>
+	<p><?php _e( 'Use this tool for migrating GC Testimonials entries to Testimonials Widget custom post types.', 'gc-testimonials-to-testimonials' ); ?></p>
 
 	<p><?php _e( 'This migration is not reversible. Backup your database beforehand or be prepared to delete each migrated testimonial manually.', 'gc-testimonials-to-testimonials' ); ?></p>
 
@@ -449,7 +449,7 @@ class Gc_Testimonials_to_Testimonials extends Aihrus_Common {
 
 		$result = self::migrate_item( self::$post_id, $post );
 		if ( is_numeric( $result ) )
-			die( json_encode( array( 'success' => sprintf( __( '&quot;<a href="%1$s" target="_blank">%2$s</a>&quot; GC Testimonial ID %3$s was successfully migrated to Testimonials %6$s &quot;<a href="%4$s" target="_blank">%5$s</a>&quot;.', 'gc-testimonials-to-testimonials' ), get_permalink( self::$post_id ), esc_html( get_the_title( self::$post_id ) ), self::$post_id, get_permalink( $result ), esc_html( get_the_title( $result ) ), $result ) ) ) );
+			die( json_encode( array( 'success' => sprintf( __( 'GC Testimonial ID %1$s was successfully migrated to Testimonials Widget %4$s &quot;<a href="%2$s" target="_blank">%3$s</a>&quot;.', 'gc-testimonials-to-testimonials' ), self::$post_id, get_permalink( $result ), esc_html( get_the_title( $result ) ), $result ) ) ) );
 		else
 			die( json_encode( array( 'error' => sprintf( __( '&quot;<a href="%1$s" target="_blank">%2$s</a>&quot; Unable to be migrated.', 'gc-testimonials-to-testimonials' ), get_permalink( self::$post_id ), esc_html( get_the_title( self::$post_id ) ) ) ) ) );
 	}
@@ -535,7 +535,7 @@ class Gc_Testimonials_to_Testimonials extends Aihrus_Common {
 
 
 	public static function notice_1_0_0() {
-		$text = sprintf( __( 'If your Migrate GC Testimonials to Testimonials display has gone to funky town, please <a href="%s">read the FAQ</a> about possible CSS fixes.', 'gc-testimonials-to-testimonials' ), 'https://aihrus.zendesk.com/entries/23722573-Major-Changes-Since-2-10-0' );
+		$text = sprintf( __( 'If your Migrate GC Testimonials to Testimonials display has gone to funky town, please <a href="%s">read the FAQ</a> about possible CSS fixes.', 'gc-testimonials-to-testimonials' ), 'https://nodedesk.zendesk.com/hc/en-us/articles/202244392-Major-Changes-Since-2-10-0' );
 
 		aihr_notice_updated( $text );
 	}
