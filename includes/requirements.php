@@ -1,6 +1,6 @@
 <?php
 /*
-	Copyright 2015 Axelerant (email: info@axelerant.com)
+	Copyright 2015 Axelerant
 
 	This program is free software; you can redistribute it and/or modify
 	it under the terms of the GNU General Public License, version 2, as
@@ -21,9 +21,9 @@ require_once ABSPATH . 'wp-admin/includes/plugin.php';
 if ( ! function_exists( 'aihr_notice_version' ) ) {
 	function aihr_notice_version( $required_base, $required_name, $required_slug, $required_version, $item_name ) {
 		$is_active = is_plugin_active( $required_base );
-		if ( $is_active )
+		if ( $is_active ) {
 			$link = sprintf( __( '<a href="%1$s">update to</a>', 'gc-testimonials-to-testimonials' ), self_admin_url( 'update-core.php' ) );
-		else {
+		} else {
 			$plugins = get_plugins();
 			if ( empty( $plugins[ $required_base ] ) ) {
 				$install = esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=' . $required_slug ), 'install-plugin_' . $required_slug ) );
@@ -58,7 +58,7 @@ function gct2t_requirements_check() {
 
 function gct2t_notice_version() {
 	aihr_notice_version( GCT2T_REQ_BASE, GCT2T_REQ_NAME, GCT2T_REQ_SLUG, GCT2T_REQ_VERSION, GCT2T_NAME );
-	
+
 	deactivate_plugins( GCT2T_BASE );
 }
 
